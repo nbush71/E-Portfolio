@@ -42,6 +42,7 @@ body {
         color:#6030b1;
         text-align: center;
         line-height: 1.5;
+        font-style: bold;
     }
 
     p {
@@ -59,6 +60,10 @@ body {
     i:hover {
       opacity: 0.7;
     }
+
+.no-cursor {
+  cursor: not-allowed;
+}
 
     .link__hover-effect:after {
       content: "";
@@ -120,7 +125,6 @@ height: auto;
 .container__gradient  { 
   padding: 20px;
   background: linear-gradient(135deg, #ce97e4, white);
-
 }
 
 .row {
@@ -135,6 +139,7 @@ height: auto;
 
 .text--purple {
   color: #6030b1;
+  font-weight: bold;
 }
 
 .text--white {
@@ -270,6 +275,7 @@ align-items: center;
     margin: 0 10px;
     gap: 20px;
 }
+
 .nav__link--anchor {
     margin: 5px;
     color: black;
@@ -280,6 +286,7 @@ align-items: center;
 .nav__link:hover {
   color: #6030b1;
 }
+
 .nav__link--anchor-primary {
     background-color: #6030b1;
     padding: 8px 20px;
@@ -485,6 +492,11 @@ font-weight: bold;
   gap: 15px
 }
 
+.language__container--background {
+padding: 20px;
+background-color: white;
+}
+
 .language__img--wrapper {
   font-size: 14px;
   display: flex;
@@ -549,6 +561,7 @@ font-weight: bold;
   align-items: center;
   margin: 0 auto;
   text-align: center;
+    background-color: none;
 }
 
 .project1 {
@@ -644,9 +657,7 @@ font-weight: bold;
 }
 
 .project__container {
-  padding: 20px 0;
-  border-radius: 12px;
-  border-width: 3px;
+  padding: 24px 0;
   color: black;
   display: flex;
   gap: 1em;
@@ -681,7 +692,8 @@ footer {
   flex-direction: column;
   align-items: center;
   padding: 0;
-  background-color: white;
+  background-color: black;
+  color: none;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
 }
@@ -691,12 +703,18 @@ footer {
   height: 100px;
   display: flex;
   position: relative;
+  filter: brightness(0) invert(1);
 }
 
-.footer__social--link,
 .footer__copyright,
 .footer__logo--popper {
   color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+.footer__social--link {
+  color: white;
   font-weight: bold;
   text-align: center;
 }
@@ -707,7 +725,7 @@ footer {
   border-color: #6030b1;
   border-radius: 12px;
   border-width: 3px;
-  color: black;
+  color: white;
   display: flex;
   gap: 1em;
   flex-wrap: wrap;
@@ -731,6 +749,7 @@ footer {
   font-weight: 700;
   opacity: 0;
   transition: all 300ms ease;
+  color: #915cec;
 }
 
 .footer__anchor {
