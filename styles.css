@@ -249,6 +249,15 @@ section:nth-child(even) {
   cursor: pointer;
   
 }
+#projects .button {
+  background-color: #6030b1;
+  color: white;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 500px;
+  cursor: pointer;
+  font-weight: bold; 
+}
 
 .button:hover {
   background-color: #915cec;
@@ -606,7 +615,7 @@ background-color: white;
 }
 
 .project:hover .project__img {
-  transform: scale(1.07);
+ xt-alignxt-alignxt-align transform: scale(1.07);
   filter: blur(5px);
 }
 
@@ -651,6 +660,7 @@ background-color: white;
   text-align: left;
   color: #fff;
 }
+
 .project__title {
   text-align: center;
   font-size: 20px;
