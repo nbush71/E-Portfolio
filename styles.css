@@ -651,6 +651,8 @@ background-color: white;
 .project__description--link {
   font-size: 14px;
   margin-right: 16px;
+  color: white;
+  font-weight: bold;
 }
 
 .project__description--title,
