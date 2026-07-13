@@ -656,7 +656,7 @@ background-color: white;
 .project__description--title,
 .project__description--sub-title,
 .project__description--para,
-.project__description--link {
+.project__description--links {
   text-align: left;
   color: #fff;
 }
