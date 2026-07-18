@@ -368,11 +368,6 @@ font-weight: bold;
   flex-direction: column;
 }
 
-
-#About-Me {
-  min-height: 100vh;
-}
-
 .about-me__info {
   display: flex;
   flex-direction: column;
