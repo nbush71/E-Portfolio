@@ -10,9 +10,7 @@ body {
         margin: 20px;
         padding: 20px;
         box-sizing: border-box;
-        background: #74ebd5;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to left, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to left, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: #ACB6E5;
 
     }
 
@@ -61,8 +59,41 @@ body {
       opacity: 0.7;
     }
 
+    i {
+      width: 75%;
+      height: 75%;
+      position: absolute;
+      justify-content:space-between;
+    }
+
 .no-cursor {
   cursor: not-allowed;
+}
+
+.mail__btn-icon {
+  font-size: 26px;
+  line-height: 1;
+  transform: translateY(-1px);
+  text-shadow: 0 2px 10px rgba(36, 19, 47, 0.3);
+}
+
+.mail__btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.38);
+  background: radial-gradient(circle at 30% 24%, #c084fc 0%, #8b5cf6 42%, #4c1d95 100%);
+  color: #fff;
+  position: fixed;
+  bottom: 32px;
+  right: 40px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 18px 36px rgba(76, 29, 149, 0.38), 0 0 0 8px rgba(192, 132, 252, 0.10);
+  transition: transform 260ms ease, box-shadow 260ms ease, filter 260ms ease;
 }
 
     .link__hover-effect:after {
@@ -409,6 +440,7 @@ font-weight: bold;
   /* Improving my own picture */
   transform: scale(1.15);
   padding-top: 10px;
+  padding-right: 10px;
   margin: 0 auto;
 }
 
@@ -420,6 +452,7 @@ font-weight: bold;
   font-size: 18px;
   margin-bottom: 10px;
   animation: fade-up 650ms 600ms backwards;
+  text-wrap: wrap;
 }
 
 .about-me__link {
@@ -451,7 +484,7 @@ font-weight: bold;
 }
 
 .about-me__img {
-  width: 100%;
+  width: 90%;
   animation: fade-in 1200ms 800ms backwards;
 }
 
@@ -636,7 +669,7 @@ background-color: white;
 }
 
 .project__description--para {
-  margin: 14px 0;
+  margin: 16px 0;
 }
 
 .project__description--link {
@@ -703,7 +736,6 @@ footer {
   height: 100px;
   display: flex;
   position: relative;
-  filter: brightness(0) invert(1);
 }
 
 .footer__copyright,
