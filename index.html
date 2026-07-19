@@ -3,6 +3,7 @@
 <met CHARSET="UTF-8">
 <meta name="viewport" content="width=device=width, initial-scale-1.0">
 <link rel="stylesheet" href="styles.css">
+<script src="index.js"></script>
 <script src="https://kit.fontawesome.com/e74228a484.js" crossorigin="anonymous"></script>
 <title>Nadine's E-Portfolio</title>
 </head>
@@ -24,7 +25,7 @@
               <a href="http://www.linkedin.com/in/nadineabush" class="nav__link--anchor
             link__hover-effect 
             link__hover-effect--purple">LinkedIn</a></li>
-            <li class="nav__link"><a href="mailto:nbush71@gmail.com" class="
+            <li class="nav__link onclick="toggleModal()"><a href="#" class="
             nav__link--anchor
             nav__link--anchor-primary">
             Contact</a></li></div>
@@ -58,75 +59,66 @@
       </a>
       <div class="modal">
       <div class="modal__half modal__about">
-        <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
-        <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer.</h4>
+        <h3 class="modal__title modal__title--about"><span  class="text--black">Here's my</span><span></span> <span text--purple>Journey</span>.</h3>
+        <h4 class="modal__sub-title modal__sub-title--about">FrontEnd Web Developer. <br>Graphic Designer <br>Technical Writer.</h4>
+<hr class="hr">
         <p class="modal__para">
-          I'm a 21 year-old Australian <b class="orange">frontend software engineer</b> with experience developing
-          websites for top-tech companies like <b class="orange">Google</b> and <b class="orange">Canva</b>.
-          <br>
-          I currently solve extremely difficult engineering
-          problems every day with <b class="orange">React</b>, <b class="orange">TypeScript</b> and <b class="orange">MobX</b>
-          in Canva's Video team.
+          I am a <span class="text--purple">FrontEnd Web Developer</span>, with previous web development experience, continuing my journey to build websites and applications for the future. I am passionate about technology and design, and growing in this field.
+          <br><br> Skilled in HTML, CSS, JavaScript, and React and technical writing skills.
         </p>
         <div class="modal__languages">
-          <figure class="modal__language">
-            <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png" alt="">
-            <span class="language__name">HTML</span>
-          </figure>
-          <figure class="modal__language">
-            <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="">
-            <span class="language__name">CSS</span>
-          </figure>
-          <figure class="modal__language">
-            <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="">
+           <div class="language">
+            <figure class="language__img--wrapper">
+              <img src="assets/HTML5_Badge_512.png" alt="HTML Logo" class="language__img">
+            </figure>
+            <span class="language__name">HTML5</span>
+          </div>
+          <div class="language">
+            <figure class="language__img--wrapper">
+              <img src="assets/CSS3 Logo.png" alt="CSS Logo" class="language__img" />
+            </figure>
+            <span class="language__name">CSS3</span>
+          </div>
+          <div class="language">
+            <figure class="language__img--wrapper">
+              <img src="assets/JavaScript Logo.png"
+                class="language__img" />
+            </figure>
             <span class="language__name">JavaScript</span>
-          </figure>
-          <figure class="modal__language">
-            <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/typescript-3521774-2945272.png" alt="">
-            <span class="language__name">TypeScript</span>
-          </figure>
-
-          <figure class="modal__language">
-            <img class="modal__language--img" src="https://mobx.js.org/img/mobx.png" alt="">
-            <span class="language__name">MobX</span>
-          </figure>
-          <figure class="modal__language">
-            <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="">
+          </div>
+             <div class="language">
+            <figure class="language__img--wrapper">
+              <img src="assets/React Logo.png" alt="React Logo"
+                class="language__img" />
+            </figure>
             <span class="language__name">React</span>
-          </figure>
-          <figure class="modal__language">
-            <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/vue-282497.png" alt="">
-            <span class="language__name">Vue</span>
-          </figure>
-          <figure class="modal__language">
-            <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/nuxt-dot-js-3628959-3030184.png" alt="">
-            <span class="language__name">Nuxt</span>
-          </figure>
+          </div>
         </div>
       </div>
       <div class="modal__half modal__contact">
         <svg class="svg-inline--fa fa-xmark click modal__exit" onclick="toggleModal()" data-prefix="fas" data-icon="xmark" role="img" viewBox="0 0 384 512" aria-hidden="true" data-fa-i2svg=""><path fill="currentColor" d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"></path></svg><!-- <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i> Font Awesome fontawesome.com -->
         <h3 class="modal__title modal__title--contact">
-          Let's have a chat!
+          <span class="text--black">Let's Connect</span> 
         </h3>
-        <h3 class="modal__sub-title modal__sub-title--contact">
-          I'm currently open to new opportunities.
+        <h3 class="modal__sub-title modal__sub-title--contact text--white">
+          Have a project in mind?  Drop me a message. <br>
+          <!--I'm currently open to new opportunities.-->
         </h3>
         <form id="contact__form" onsubmit="contact(event)">
           <div class="form__item">
-            <label class="form__item--label">Name</label>
+            <label class="form__item--label">Name</label><br>
             <input class="input" name="user_name" type="text" required="">
           </div>
           <div class="form__item">
-            <label class="form__item--label">Email</label>
+            <label class="form__item--label">Email</label><br>
             <input class="input" name="user_email" type="email" required="">
           </div>
           <div class="form__item">
-            <label class="form__item--label">Message</label>
-            <textarea class="input" name="message" type="text" required=""></textarea>
+            <label class="form__item--label">Message</label><br>
+            <textarea class="input" name="message" type="text" required="">Tell me about your project...</textarea>
           </div>
           <button id="contact__submit" class="form__submit">
-            Send it my way
+            Submit Message
           </button>
         </form>
         <div class="modal__overlay modal__overlay--loading">
@@ -268,7 +260,7 @@
    <div class="footer__row">
     <div class="footer__container">
     <a href="#" class="footer__anchor">
- <figure><img src="assets/NB_logo_White_purple.jpg" class="footer__logo--img"></figure>
+ <figure><img src="assets/NB_logo_white_Black_purple.svg" class="footer__logo--img"></figure>
         <span class="footer__logo--popper">
           Top
         </span></a>
@@ -284,7 +276,7 @@
           footer__social--link
           link__hover-effect
           link__hover-effect--purple">LinkedIn</a>        
-         <a href="asset/Example Resume.pdf" target="_blank" download class="
+         <a href="asset/Example Resume.pdf" target="_blank" class="
           footer__social--link
           link__hover-effect
           link__hover-effect--purple no-cursor
