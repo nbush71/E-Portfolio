@@ -300,7 +300,7 @@ font-weight: bold;
   transform: translateX(-50%);
 }
 
-.scroll {
+nav, .scroll, .header {
   opacity: 1;
   visibility: visible;
   transition: all 600ms 800ms;
@@ -649,9 +649,9 @@ align-items: center;
 
 .nav__logo {
   width: 30%;
-  height: 30%
+  height: 30%;
   display: block;
-  gap: 15px
+  gap: 15px;
   max-width: 100%;
   padding: 12px;
   box-sizing: border-box;
