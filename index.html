@@ -2,15 +2,28 @@
 <head>
 <met CHARSET="UTF-8">
 <meta name="viewport" content="width=device=width, initial-scale-1.0">
+<link rel="icon" href="assets/NB_Logo_purple.png" type="image/x-icon">
 <link rel="stylesheet" href="styles.css">
 <script src="index.js"></script>
 <script src="https://kit.fontawesome.com/e74228a484.js" crossorigin="anonymous"></script>
+<script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "72GuNLSPH8lOYWafw",
+      });
+   })();
+</script>
 <title>Nadine's E-Portfolio</title>
 </head>
 <body>
   <header>
       <nav class="nav__row">
-    <div class="personal-logo">Nadine Bush</div>
+    <div class="personal-logo">
+     <li class="nav__link">Nadine Bush
+      </li></div>
     <div class="nav__link">
         <ul class="nav__link">
            <li class="nav__link">
@@ -28,7 +41,13 @@
             <li class="nav__link" onclick="toggleModal()"><a href="#" class="
             nav__link--anchor
             nav__link--anchor-primary">
-            Contact</a></li></div>
+            Contact</a></li>
+           <!-- <li class="nav__link click" onclick="toggleContrast()">
+:root, :host {
+        <a class=" nav__link--anchor link__hover-effect link__hover-effect--black " href="#">
+            <svg class="svg-inline--fa fa-circle-half-stroke" data-prefix="fas" data-icon="circle-half-stroke" role="img" viewBox="0 0 512 512" aria-hidden="true" data-fa-i2svg=""><path fill="currentColor" d="M448 256c0-106-86-192-192-192l0 384c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0 256 256 0 1 1 -512 0z"></path></svg>--><!-- <i class="fa-solid fa-circle-half-stroke"></i> Font Awesome fontawesome.com --></a>
+        </li>
+          </div>
             </nav>
   </header>
   <main id="landing-page" onmousemove="moveBackground(event)">
@@ -117,7 +136,7 @@
             <label class="form__item--label">Message</label><br>
             <textarea class="input" name="message" type="text" required="">Tell me about your project...</textarea>
           </div>
-          <button id="contact__submit" class="form__submit">
+          <button id="contact__submit" class="form__submit no-cursor">
             Submit Message
           </button>
         </form>
@@ -125,7 +144,7 @@
           <svg class="svg-inline--fa fa-spinner" data-prefix="fas" data-icon="spinner" role="img" viewBox="0 0 512 512" aria-hidden="true" data-fa-i2svg=""><path fill="currentColor" d="M208 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm0 416a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zM48 208a48 48 0 1 1 0 96 48 48 0 1 1 0-96zm368 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zM75 369.1A48 48 0 1 1 142.9 437 48 48 0 1 1 75 369.1zM75 75A48 48 0 1 1 142.9 142.9 48 48 0 1 1 75 75zM437 369.1A48 48 0 1 1 369.1 437 48 48 0 1 1 437 369.1z"></path></svg><!-- <i class="fas fa-spinner"></i> Font Awesome fontawesome.com -->
         </div>
         <div class="modal__overlay modal__overlay--success">
-          Thanks for the message! Looking forward to speaking to you soon.
+          Thanks for the message! <br>Looking forward to speaking to you soon.
         </div>
       </div>
     </div>
@@ -167,31 +186,28 @@
               </div>
             </div>
           </li>
-        <!-- <li class="project">
+        <li class="project">
             <div class="project__wrapper project2">
-              <img src="./assets/loopit.png" class="project__img" alt="Project 2">
+              <img src="./assets/React_Library.jpg" class="project__img" alt="Project 2">
               <div class="project__description">
-                <h3 class="project__description--title">Project 2</h3>
-                <h4 class="project__description--sub-title">
-                  Html, CSS, JavaScript
-                </h4>
+                <h3 class="project__description--title">Module 6 - E-Commerce App with React</h3>
+                <h4 class="project__description--sub-title">HTML3, CSS3, JavaScript, React</h4>
                 <p class="project__description--para">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam leo, scelerisque sed odio eget,
-                  luctus faucibus augue. Fusce volutpat iaculis dapibus. Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit. Maecenas id eleifend libero. In hac habitasse platea dictumst.
+                A e-commerce library app built with React featuring dynamic book browsing, API-driven filtering, and a fully functional shopping cart. <br>
+                Built with modular components for navigation, highlights, featured books, and more, with responsive loading states throughout. Using GitHub and Vercel to host.
                 </p>
                 <div class="project__description--links">
-                  <a href="https://www.github.com/yourlink" target="_blank" class="project__description--link">
+                  <a href="https://www.github.com/nbush71" target="_blank" class="project__description--link">
                     <i class="fa-brands fa-github"></i>
                   </a>
-                  <a href="https://www.yourwebsite.com" class="project__description--link">
-                    <i class="fa-brands fa-link"></i>
+                  <a href="https://e-com-react-self.vercel.app" class="project__description--link">
+                    <i class="fa-brands fa-react"></i> React App
                   </a>
                 </div>
               </div>
             </div>
           </li>
-          <li class="project">
+         <!-- <li class="project">
             <div class="project__wrapper project3">
               <img src="./assets/loopit.png" class="project__img" alt="Project 3">
               <div class="project__description">
@@ -212,6 +228,7 @@
                     <i class="fa-brands fa-link"></i>
                   </a>
                 </div>-->
+                <div class="section__sub-title text--purple" >More projects soon! </div>
               </div>
             </div>
           </li>
@@ -243,12 +260,20 @@
             </figure>
             <span class="language__name">JavaScript</span>
           </div>
-             <div class="language">
+          <br /><br />
+          <div class="language">
             <figure class="language__img--wrapper">
               <img src="assets/React Logo.png" alt="React Logo"
                 class="language__img" />
             </figure>
             <span class="language__name">React</span>
+          </div>
+          <div class="language">
+            <figure class="language__img--wrapper">
+              <img src="assets/Firebase_Logo.svg" alt="Firebase Logo"
+                class="language__img" />
+            </figure>
+            <span class="language__name">FireBase</span>
           </div>
         </div>
       </div>
