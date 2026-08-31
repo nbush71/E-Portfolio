@@ -217,12 +217,12 @@ section:nth-child(even) {
   border-radius: 12px;
   border: 6px;
   padding: 12px;
-  width: 500px;
-  height: 500px;
+  width: 460px;
+  height: 440px;
   margin: 15px auto;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.20);
 }
-
+margin
 .poster h1 {
   color: black;
   font-size: 28px;
@@ -323,7 +323,7 @@ nav, .scroll, .header {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
-  max-width: 1100px;
+  max-width: 900px;
   height: 700px;
   border-radius: 20px;
   overflow: hidden;
@@ -708,7 +708,7 @@ font-weight: bold;
 }
 
 .About-Me {
-  min-height: 100vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
 }
@@ -890,7 +890,7 @@ background-color: white;
 
 .project {
   margin-bottom: 100px;
-  max-width: 876px;
+  max-width: 900px;
   justify-items: center;
 }
 
@@ -1030,6 +1030,7 @@ footer {
   border-width: 0;
   justify-content:space-between;
   border-radius: 12px;
+  max-width: 1000px;
 }
 
 .footer__social--list {
@@ -1095,7 +1096,7 @@ footer {
   font-weight: bold;
   margin: 20px;
   border-radius: 12px;
-
+  max-width: 1000px;
 }
 
 .footer__logo--popper {
@@ -1148,7 +1149,7 @@ footer {
 }
 
 /* SMALL PHONES */
-@media (max-width: 480px) {
+@media (max-width: 540px) {
   .nav__link:not(:last-child) {
     display: none;
   }
@@ -1181,5 +1182,14 @@ footer {
   .project__description--sub-title {
     text-align: center;
     margin: 12px 0;
+  }
+
+  .about-me__picture {
+    visibility: hidden;
+  }
+
+  .About-Me {
+    min-width: 420px;
+    min-height: 550px;
   }
 }
