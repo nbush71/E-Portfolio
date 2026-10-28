@@ -1,7 +1,7 @@
 <html lang="en">
   <head>
     <met CHARSET="UTF-8">
-      <meta name="viewport" content="width=device=width, initial-scale-1.0">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="icon" href="assets/NB_Logo_purple.png" type="image/x-icon">
       <link rel="stylesheet" href="styles.css">
       <script src="index.js"></script>
@@ -76,10 +76,10 @@
                   <p>I am a <span class="text--purple">FrontEnd Software Engineer</span>, with previous web development experience, continuing my journey to build websites and applications for the future. I am passionate about technology and design, and growing in this field.
                     <br><br> Skilled in HTML, CSS, JavaScript, React, Next.js, TypeScript, Tailwind CSS, and technical writing skills.
                   </p></div>
-                <!-- <a class="scroll" href="#project">
+                <a class="scroll" href="#project">
                   <div class="scroll__icon click">
                   </div>
-                </a> -->
+                </a>
     
               </div>    
       </section>
@@ -89,6 +89,7 @@
         </button>
       </a>
       <div class="modal">
+        <button class="modal__mobile-exit click" onclick="toggleModal()" aria-label="Close contact dialog">&times;</button>
         <div class="modal__half modal__about">
           <h3 class="modal__title modal__title--about"><span class="text--black">Here's my</span><span></span> <span text--purple>Journey</span>.</h3>
           <h4 class="modal__sub-title modal__sub-title--about">FrontEnd Software Engineer <br>Graphic Designer <br>Technical Writer</h4>
@@ -177,7 +178,7 @@
             <span class="text--black">Let's Connect</span> 
           </h3>
           <h3 class="modal__sub-title modal__sub-title--contact text--white">
-            Have a project in mind? <br />  <span class="text--black">Drop me a message.</span> <br>
+            Have a project in mind? <br />  <span class="text--black">Send me a message.</span> <br>
             I'm currently open to new opportunities.
           </h3>
           <form id="contact__form" onsubmit="contact(event)">
@@ -191,9 +192,9 @@
             </div>
             <div class="form__item">
               <label class="form__item--label">Message</label><br>
-              <textarea class="input" name="message" type="text" required="">Tell me about your project...</textarea>
+              <textarea class="input" name="message" type="text" required="" placeholder="Tell me about your project..."></textarea>
             </div>
-            <button id="contact__submit" class="form__submit no-cursor">
+            <button id="contact__submit" class="form__submit">
               Submit Message
             </button>
           </form>
@@ -226,7 +227,7 @@
                 <div class="project__wrapper project1">
                   <img src="assets/Treact.jpg" class="project__img" alt="Module 3 Final Project Preview">
                   <div class="project__description">
-                    <h3 class="project__description--title">Module 3 Final Project Preview</h3>
+                    <h3 class="project__description--title">Module 3 - Treact - Final Project </h3>
                     <h4 class="project__description--sub-title">
                       HTML, CSS, Responsive Design
                     </h4>
@@ -236,7 +237,7 @@
                     <div class="project__description--links">
                     <a href="https://nbush71.github.io/Treact2/" class="project__description--link" alt="Treact Project"><span class="text--white">Treact Project</span>
                         </a>
-                      <a href="http://www.github.com" target="_blank" class="project__description--link">
+                      <a href="http://www.github.com/nbush71/Treact2" target="_blank" class="project__description--link">
                         <i class="fa-brands fa-github"></i>
                       </a>
                     </div>
@@ -247,7 +248,7 @@
                 <div class="project__wrapper project2">
                   <img src="./assets/React_Library.jpg" class="project__img" alt="Project 2">
                   <div class="project__description">
-                    <h3 class="project__description--title">Module 6 - E-Commerce App with React</h3>
+                    <h3 class="project__description--title">Module 6 - Library - E-Commerce App with React</h3>
                     <h4 class="project__description--sub-title">HTML3, CSS3, JavaScript, React</h4>
                     <p class="project__description--para">
                       A e-commerce library app built with React featuring dynamic book browsing, API-driven <br/>filtering, and a fully functional shopping cart. <br/><br/>
@@ -268,7 +269,7 @@
                 <div class="project__wrapper project2">
                   <img src="./assets/Movies_React.jpg" class="project__img" alt="Project 2">
                   <div class="project__description">
-                    <h3 class="project__description--title">Module 7 - React Final - Movie App with React</h3>
+                    <h3 class="project__description--title">Module 7 - Movie Search App with React</h3>
                     <h4 class="project__description--sub-title">HTML3, CSS3, JavaScript, React</h4>
                     <p class="project__description--para">
                       A Movie Search app built with React featuring dynamic movie browsing, API-driven <br/> filtering, and shopping cart. <br/><br/>
@@ -289,7 +290,7 @@
                 <div class="project__wrapper project2">
                   <img src="./assets/Ultraverse.jpg" class="project__img" alt="Project 2">
                   <div class="project__description">
-                    <h3 class="project__description--title">Module 8 - Virtual Internship - Ultraverse</h3>
+                    <h3 class="project__description--title">Module 8 - Ultraverse - Virtual Internship</h3>
                     <h4 class="project__description--sub-title">React, HTML, CSS, JavaScript, GitHub and Vercel.</h4>
                     <p class="project__description--para">
                       The Ultraverse NFT World app built with React featuring dynamic content <br/> summarization, and API integration. <br/><br/>
@@ -310,8 +311,8 @@
                 <div class="project__wrapper project2">
                   <img src="./assets/Summarist.jpg" class="project__img" alt="Project 2">
                   <div class="project__description">
-                    <h3 class="project__description--title">Module 9 <br/> Advanced Virtual Internship - Summarist</h3>
-                    <h4 class="project__description--sub-title">React, Next.js, Tailwind CSS, JavaScript, Stripe, <br/>Redux, React-Icons, Firebase + Authentication, and Vercel</h4>
+                    <h3 class="project__description--title">Module 9 - Summarist - Advanced Virtual Internship </h3>
+                    <h4 class="project__description--sub-title">React, Next.js, Tailwind CSS, JavaScript, Stripe, Redux, React-Icons, Firebase + Authentication, and Vercel</h4>
                     <p class="project__description--para">
                       A Summarist app built with React and Next.js featuring dynamic content <br/>summarization, API integration, and user authentication. <br/><br/>
                       Built with modular components for navigation, featured content, login, search,<br/> and more, with responsive loading states throughout. Using GitHub and Vercel to host.
@@ -331,8 +332,8 @@
                 <div class="project__wrapper project2">
                   <img src="./assets/Skinstric.jpg" class="project__img" alt="Project 2">
                   <div class="project__description">
-                    <h3 class="project__description--title">Module 12 <br/> Skinstric - Virtual Paid Internship - Summarist</h3>
-                    <h4 class="project__description--sub-title">React, Next.js, Tailwind CSS, JavaScript, AI-driven, <br/>GitHub and Vercel</h4>
+                    <h3 class="project__description--title">Module 12 - Skinstric - Virtual Paid Internship</h3>
+                    <h4 class="project__description--sub-title">React, Next.js, Tailwind CSS, JavaScript, AI-Assisted Development</h4>
                     <p class="project__description--para">
                       Real-world project creating a replica of the Skinstric skincare AI app built from scratch with <br/>React and Next.js featuring dynamic content summarization, and API integrations. <br/><br/>
 
