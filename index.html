@@ -1,203 +1,486 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-<met CHARSET="UTF-8">
-<meta name="viewport" content="width=device=width, initial-scale-1.0">
-<link rel="stylesheet" href="styles.css">
-<script src="https://kit.fontawesome.com/e74228a484.js" crossorigin="anonymous"></script>
-<title>Nadine's E-Portfolio</title>
-</head>
-<body>
-  <header>
+  <head>
+    <met CHARSET="UTF-8">
+      <meta name="viewport" content="width=device=width, initial-scale-1.0">
+      <link rel="icon" href="assets/NB_Logo_purple.png" type="image/x-icon">
+      <link rel="stylesheet" href="styles.css">
+      <script src="index.js"></script>
+      <script src="https://kit.fontawesome.com/e74228a484.js" crossorigin="anonymous"></script>
+      <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+      <script type="text/javascript">
+        (function () {
+          emailjs.init({
+            publicKey: "72GuNLSPH8lOYWafw",
+          });
+        })();
+      </script>
+      <title>Nadine's E-Portfolio</title>
+  </head>
+  <body>
+    <header>
       <nav class="nav__row">
-    <div class="personal-logo">Nadine Bush</div>
-    <div class="nav__link">
-        <ul class="nav__link">
-           <li class="nav__link">
-            <a href="#languages" class="nav__link--anchor
-            link__hover-effect 
-            link__hover-effect--purple">
-            Languages</a></li></div>
-          <li class="nav__link">
-            <a href="#project" class="nav__link--anchor
-            link__hover-effect link__hover-effect--purple">My Work</a></li>
+        <div class="personal-logo">
+          <li class="nav__link">Nadine Bush
+          </li></div>
+        <div class="nav__link">
+          <ul class="nav__link">
             <li class="nav__link">
-              <a href="http://www.linkedin.com/in/nadineabush" class="nav__link--anchor
+              <a
+                href="#languages"
+                class="nav__link--anchor
             link__hover-effect 
-            link__hover-effect--purple">LinkedIn</a></li>
-            <li class="nav__link"><a href="mailto:nbush71@gmail.com" class="
+            link__hover-effect--purple"
+              >
+                Languages</a></li></div>
+        <li class="nav__link">
+          <a
+            href="#project"
+            class="nav__link--anchor
+            link__hover-effect link__hover-effect--purple"
+          >My Work</a></li>
+        <li class="nav__link">
+          <a
+            href="http://www.linkedin.com/in/nadineabush"
+            class="nav__link--anchor
+            link__hover-effect 
+            link__hover-effect--purple"
+          >LinkedIn</a></li>
+        <li class="nav__link" onclick="toggleModal()"><a
+            href="#"
+            class="
             nav__link--anchor
-            nav__link--anchor-primary">
-            Contact</a></li></div>
-            </nav>
-  </header>
-  <main>
-    <section class="About-Me">
-
-    <div class="poster" id="About">
-    <div>
-      <div class="flex flex-1" id="About-Me">
-      <div class="about-me__info row">
-        <div class="about-me__info--container">
-      <figure class="about-me__picture--mask">        
-    <img src="assets/NadineBush.jpg" class="about-me__picture" alt="Nadine Bush">
-    </figure>
-    <br> <h1 class="about-me__info--title">My name is <span>Nadine Bush</span>.</h1>
-    <p>I am a <span class="text--purple">Front-End Software Engineer</span>, with previous web development experience, continuing my journey to build websites and applications for the future. I am passionate about technology and design, and growing in this field.
-    <br><br> Skilled in HTML, CSS, JavaScript, and React, <br> and technical writing skills.
-</p></div></div>
-    </section>
-    <section>
-      <div class="graphicdesign__portfolio">
-        
-      </div>
-    </section>
-    <section id="project">
-    <div class="project__container container__gradient">
-      <div class="row">
-        <h1 class="section__title">Here are some of my <span class="text--purple">projects</span>.</h1>
-        <ul class="project__list">
-          <li class="project">
-            <div class="project__wrapper project1">
-              <img src="assets/My Portfolio.jpg" class="project__img" alt="Portfolio website">
-              <div class="project__description">
-                <h3 class="project__description--title">My Portfolio Website</h3>
-                <h4 class="project__description--sub-title">
-                  HTML, CSS, JavaScript and React
-                </h4>
-                <p class="project__description--para">
-                 My personal e-portfolio website showcasing my growth as a <br>front-end software engineer. <br>Using HTML, CSS, JavaScript and React.
-                </p>
-                <div class="project__description--links">
-                  <a href="http://www.github.com" target="_blank" class="project__description--link">
-                    <i class="fa-brands fa-github"></i>
-                  </a>
-                  <a href="https://nbush71.github.io/E-Portfolio/" class="project__description--link">
-                    <i class="fa-solid fa-link"></i>
-                  </a>
-                </div>
-              </div>
+            nav__link--anchor-primary"
+          >
+            Contact</a></li>
+        <!-- <li class="nav__link click" onclick="toggleContrast()">
+:root, :host {
+        <a class=" nav__link--anchor link__hover-effect link__hover-effect--black " href="#">
+            <svg class="svg-inline--fa fa-circle-half-stroke" data-prefix="fas" data-icon="circle-half-stroke" role="img" viewBox="0 0 512 512" aria-hidden="true" data-fa-i2svg=""><path fill="currentColor" d="M448 256c0-106-86-192-192-192l0 384c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0 256 256 0 1 1 -512 0z"></path></svg>--><!-- <i class="fa-solid fa-circle-half-stroke"></i> Font Awesome fontawesome.com --></a>
+        </li>
+        </div>
+      </nav>
+    </header>
+    <main id="landing-page" onmousemove="moveBackground(event)">
+      <section class="About-Me">
+        <div class="poster" id="About">
+          <div>
+            <div class="flex flex-1" id="About-Me">
+              <div class="about-me__info row">
+                <div class="about-me__info--container">
+                  <figure class="about-me__picture--mask">        
+                    <img src="assets/NadineBush.jpg" class="about-me__picture" alt="Nadine Bush">
+                  </figure>
+                  <br> <h1 class="about-me__info--title">My name is <span>Nadine Bush</span>.</h1>
+                  <p>I am a <span class="text--purple">FrontEnd Software Engineer</span>, with previous web development experience, continuing my journey to build websites and applications for the future. I am passionate about technology and design, and growing in this field.
+                    <br><br> Skilled in HTML, CSS, JavaScript, React, Next.js, TypeScript, Tailwind CSS, and technical writing skills.
+                  </p></div>
+                <!-- <a class="scroll" href="#project">
+                  <div class="scroll__icon click">
+                  </div>
+                </a> -->
+    
+              </div>    
+      </section>
+      <a href="#">
+        <button class="mail__btn click" onclick="toggleModal()">
+          <i class="fa-solid fa-envelope"></i>
+        </button>
+      </a>
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about"><span class="text--black">Here's my</span><span></span> <span text--purple>Journey</span>.</h3>
+          <h4 class="modal__sub-title modal__sub-title--about">FrontEnd Software Engineer <br>Graphic Designer <br>Technical Writer</h4>
+          <hr class="hr">
+          <p class="modal__para">
+            I am a <span class="text--purple">FrontEnd Software Engineer</span>, with previous web development experience, continuing my journey to build websites and applications for the future. I am passionate about technology and design, and growing in this field.
+            <br><br> Skilled in HTML, CSS, JavaScript, React, Next.js, TypeScript, Tailwind CSS, and technical writing skills.
+          </p>
+          <div class="modal__languages">
+            <div class="language">
+              <figure class="language__img--wrapper">
+                <img src="assets/HTML5_Badge_512.png" alt="HTML Logo" class="language__img">
+              </figure>
+              <span class="language__name" style="font-size: 12px;">HTML5</span>
             </div>
-          </li>
-        
-          <li class="project">
-            <div class="project__wrapper project2">
-              <img src="./assets/loopit.png" class="project__img" alt="Project 2">
-              <div class="project__description">
-                <h3 class="project__description--title">Project 2</h3>
-                <h4 class="project__description--sub-title">
-                  Html, CSS, JavaScript
-                </h4>
-                <p class="project__description--para">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam leo, scelerisque sed odio eget,
-                  luctus faucibus augue. Fusce volutpat iaculis dapibus. Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit. Maecenas id eleifend libero. In hac habitasse platea dictumst.
-                </p>
-                <div class="project__description--links">
-                  <a href="https://www.github.com/yourlink" target="_blank" class="project__description--link">
-                    <i class="fa-brands fa-github"></i>
-                  </a>
-                  <a href="https://www.yourwebsite.com" class="project__description--link">
-                    <i class="fa-brands fa-link"></i>
-                  </a>
-                </div>
-              </div>
+            <div class="language">
+              <figure class="language__img--wrapper">
+                <img src="assets/CSS3 Logo.png" alt="CSS Logo" class="language__img"/>
+              </figure>
+              <span class="language__name" style="font-size: 12px;">CSS3</span>
             </div>
-          </li>
-          <li class="project">
-            <div class="project__wrapper project3">
-              <img src="./assets/loopit.png" class="project__img" alt="Project 3">
-              <div class="project__description">
-                <h3 class="project__description--title">Project 3</h3>
-                <h4 class="project__description--sub-title">
-                  Html, CSS, JavaScript
-                </h4>
-                <p class="project__description--para">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam leo, scelerisque sed odio eget,
-                  luctus faucibus augue. Fusce volutpat iaculis dapibus. Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit. Maecenas id eleifend libero. In hac habitasse platea dictumst.
-                </p>
-                <div class="project__description--links">
-                  <a href="https://www.github.com/yourlink" target="_blank" class="project__description--link">
-                    <i class="fa-brands fa-github"></i>
-                  </a>
-                  <a href="https://www.yourwebsite.com" class="project__description--link">
-                    <i class="fa-brands fa-link"></i>
-                  </a>
-                </div>
-              </div>
+            <div class="language">
+              <figure class="language__img--wrapper">
+                <img
+                  src="assets/JavaScript Logo.png"
+                  class="language__img"
+                />
+              </figure>
+              <span class="language__name" style="font-size: 12px;">JavaScript</span>
             </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-<section id="languages">
-    <div class="language__container--background">
-      <div class="row">
-      <h1 class="section__title">This is my <span>technology stack</span>.</h1>
-        <div class="language__list">
-          <div class="language">
-            <figure class="language__img--wrapper">
-              <img src="assets/HTML5_Badge_512.png" alt="HTML Logo" class="language__img">
-            </figure>
-            <span class="language__name">HTML5</span>
+            <div class="language">
+              <figure class="language__img--wrapper">
+                <img
+                  src="assets/React Logo.png"
+                  alt="React Logo"
+                  class="language__img"
+                />
+              </figure>
+              <span class="language__name" style="font-size: 12px;">React</span>
+            </div>
+            <div class="language">
+                <figure class="language__img--wrapper">
+                  <img
+                    src="assets/Next-js_Logo_1.png"
+                    alt="Next.js Logo"
+                    class="language__img"
+                  />
+                </figure>
+                <span class="language__name" style="font-size: 12px;">Next.js</span>
+              </div>
+              <div class="language">
+                <figure class="language__img--wrapper">
+                  <img
+                    src="assets/ts-logo-128.png"
+                    alt="TypeScript Logo"
+                    class="language__img"
+                  />
+                </figure>
+                <span class="language__name" style="font-size: 12px;">TypeScript</span>
+              </div>
+              <div class="language">
+                <figure class="language__img--wrapper">
+                  <img
+                    src="assets/TailwindCSS_logo.jpeg"
+                    alt="Tailwind CSS Logo"
+                    class="language__img"
+                  />
+                </figure>
+                <span class="language__name" style="font-size: 12px;">Tailwind CSS</span>
+              </div>
+              <div class="language">
+                <figure class="language__img--wrapper">
+                  <img
+                    src="assets/Firebase_Logo.svg"
+                    alt="Firebase Logo"
+                    class="language__img"
+                  />
+                </figure>
+                <span class="language__name" style="font-size: 12px;">Firebase</span>
+              </div>
           </div>
-          <div class="language">
-            <figure class="language__img--wrapper">
-              <img src="assets/CSS3 Logo.png" alt="CSS Logo" class="language__img" />
-            </figure>
-            <span class="language__name">CSS3</span>
+        </div>
+        <div class="modal__half modal__contact">
+          <svg class="svg-inline--fa fa-xmark click modal__exit" onclick="toggleModal()" data-prefix="fas" data-icon="xmark" role="img" viewBox="0 0 384 512" aria-hidden="true" data-fa-i2svg=""><path fill="currentColor" d="M55.1 73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L147.2 256 9.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192.5 301.3 329.9 438.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.8 256 375.1 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192.5 210.7 55.1 73.4z"></path></svg><!-- <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i> Font Awesome fontawesome.com -->
+          <h3 class="modal__title modal__title--contact">
+            <span class="text--black">Let's Connect</span> 
+          </h3>
+          <h3 class="modal__sub-title modal__sub-title--contact text--white">
+            Have a project in mind? <br />  <span class="text--black">Drop me a message.</span> <br>
+            I'm currently open to new opportunities.
+          </h3>
+          <form id="contact__form" onsubmit="contact(event)">
+            <div class="form__item">
+              <label class="form__item--label">Name</label><br>
+              <input class="input" name="user_name" type="text" required="">
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Email</label><br>
+              <input class="input" name="user_email" type="email" required="">
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label><br>
+              <textarea class="input" name="message" type="text" required="">Tell me about your project...</textarea>
+            </div>
+            <button id="contact__submit" class="form__submit no-cursor">
+              Submit Message
+            </button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <svg class="svg-inline--fa fa-spinner" data-prefix="fas" data-icon="spinner" role="img" viewBox="0 0 512 512" aria-hidden="true" data-fa-i2svg=""><path fill="currentColor" d="M208 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm0 416a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zM48 208a48 48 0 1 1 0 96 48 48 0 1 1 0-96zm368 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zM75 369.1A48 48 0 1 1 142.9 437 48 48 0 1 1 75 369.1zM75 75A48 48 0 1 1 142.9 142.9 48 48 0 1 1 75 75zM437 369.1A48 48 0 1 1 369.1 437 48 48 0 1 1 437 369.1z"></path></svg><!-- <i class="fas fa-spinner"></i> Font Awesome fontawesome.com -->
           </div>
-          <div class="language">
-            <figure class="language__img--wrapper">
-              <img src="assets/JavaScript Logo.png"
-                class="language__img" />
-            </figure>
-            <span class="language__name">JavaScript</span>
-          </div>
-             <div class="language">
-            <figure class="language__img--wrapper">
-              <img src="assets/React Logo.png" alt="React Logo"
-                class="language__img" />
-            </figure>
-            <span class="language__name">React</span>
+          <div class="modal__overlay modal__overlay--success">
+            Thanks for the message! <br>Looking forward to speaking to you soon.
           </div>
         </div>
       </div>
-    </div>
-  </section>
-</main>
-  <footer>
-   <div class="footer__row">
-    <div class="footer__container">
-    <a href="#" class="footer__anchor">
- <figure><img src="assets/NB_logo_White_purple.jpg" class="footer__logo--img"></figure>
-        <span class="footer__logo--popper">
-          Top
-        </span></a>
-        <div class="container">
-        <div class="footer__social--list">
+      <img src="assets/semi circle.svg" class="shape shape--0" style="transform: translate(58.05px, 0.05px) rotate(580.5deg);">
+      <img src="assets/circle.svg" class="shape shape--1" style="transform: translate(-58.05px, -0.05px) rotate(-580.5deg);">
+      <img src="assets/squiggly.svg" class="shape shape--2" style="transform: translate(34.95px, 0.35px) rotate(349.5deg);">
+      <img src="assets/circle.svg" class="shape shape--3" style="transform: translate(-58.05px, -0.05px) rotate(-580.5deg);">
+      <img src="assets/triangle.svg" class="shape shape--4" style="transform: translate(58.05px, 0.05px) rotate(580.5deg);">
+      <img src="assets/circle.svg" class="shape shape--5" style="transform: translate(-58.05px, -0.05px) rotate(-580.5deg);">
+      <img src="assets/squiggly.svg" class="shape shape--6" style="transform: translate(58.05px, 0.05px) rotate(580.5deg);">
+      <img src="assets/circle.svg" class="shape shape--7" style="transform: translate(-58.05px, -0.05px) rotate(-580.5deg);">
+      <img src="assets/semi circle.svg" class="shape shape--8" style="transform: translate(58.05px, 0.05px) rotate(580.5deg);">
+      </section>   
+      </section>   
+      </section>   
+      <section id="project">
+        <div class="project__container container__gradient">
           <div class="row">
-         <ul class="nav__link--list">
-          <a href="http://www.github.com" target="_blank" class="
+            <h1 class="section__title">Here are some of my <span class="text--purple">projects</span>.</h1>
+            <ul class="project__list">
+              <li class="project">
+                <div class="project__wrapper project1">
+                  <img src="assets/Treact.jpg" class="project__img" alt="Module 3 Final Project Preview">
+                  <div class="project__description">
+                    <h3 class="project__description--title">Module 3 Final Project Preview</h3>
+                    <h4 class="project__description--sub-title">
+                      HTML, CSS, Responsive Design
+                    </h4>
+                    <p class="project__description--para">
+                      Responsive front-end project demonstrating layout structure, clean sections, user-friendly navigation, and polished styling.
+                    </p>
+                    <div class="project__description--links">
+                    <a href="https://nbush71.github.io/Treact2/" class="project__description--link" alt="Treact Project"><span class="text--white">Treact Project</span>
+                        </a>
+                      <a href="http://www.github.com" target="_blank" class="project__description--link">
+                        <i class="fa-brands fa-github"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="project">
+                <div class="project__wrapper project2">
+                  <img src="./assets/React_Library.jpg" class="project__img" alt="Project 2">
+                  <div class="project__description">
+                    <h3 class="project__description--title">Module 6 - E-Commerce App with React</h3>
+                    <h4 class="project__description--sub-title">HTML3, CSS3, JavaScript, React</h4>
+                    <p class="project__description--para">
+                      A e-commerce library app built with React featuring dynamic book browsing, API-driven <br/>filtering, and a fully functional shopping cart. <br/><br/>
+                      Built with modular components for navigation, highlights, featured books, and more, with responsive loading states throughout. Using GitHub and Vercel to host.
+                    </p>
+                    <div class="project__description--links">
+                      <a href="https://www.github.com/nbush71" target="_blank" class="project__description--link">
+                        <i class="fa-brands fa-github"></i>
+                      </a>
+                      <a href="https://e-com-react-self.vercel.app" class="project__description--link">
+                        <i class="fa-brands fa-react"></i> React App
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="project">
+                <div class="project__wrapper project2">
+                  <img src="./assets/Movies_React.jpg" class="project__img" alt="Project 2">
+                  <div class="project__description">
+                    <h3 class="project__description--title">Module 7 - React Final - Movie App with React</h3>
+                    <h4 class="project__description--sub-title">HTML3, CSS3, JavaScript, React</h4>
+                    <p class="project__description--para">
+                      A Movie Search app built with React featuring dynamic movie browsing, API-driven <br/> filtering, and shopping cart. <br/><br/>
+                      Built with modular components for navigation, featured movies, filtering, and more, <br/> with responsive loading states throughout. Using GitHub and Vercel to host.
+                    </p>
+                    <div class="project__description--links">
+                      <a href="https://www.github.com/nbush71" target="_blank" class="project__description--link">
+                        <i class="fa-brands fa-github"></i>
+                      </a>
+                      <a href="https://movies-react-ashy-eight.vercel.app/" class="project__description--link">
+                        <i class="fa-brands fa-react"></i> React App
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="project">
+                <div class="project__wrapper project2">
+                  <img src="./assets/Ultraverse.jpg" class="project__img" alt="Project 2">
+                  <div class="project__description">
+                    <h3 class="project__description--title">Module 8 - Virtual Internship - Ultraverse</h3>
+                    <h4 class="project__description--sub-title">React, HTML, CSS, JavaScript, GitHub and Vercel.</h4>
+                    <p class="project__description--para">
+                      The Ultraverse NFT World app built with React featuring dynamic content <br/> summarization, and API integration. <br/><br/>
+                      Built with modular components for navigation, featured content, search, carousel, <br/> timer and more, with responsive loading states throughout. Using GitHub and Vercel to host.
+                    </p>
+                    <div class="project__description--links">
+                      <a href="https://www.github.com/nbush71" target="_blank" class="project__description--link">
+                        <i class="fa-brands fa-github"></i>
+                      </a>
+                      <a href="https://nadine-internship.vercel.app/" class="project__description--link">
+                        <i class="fa-brands fa-react"></i> React App
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="project">
+                <div class="project__wrapper project2">
+                  <img src="./assets/Summarist.jpg" class="project__img" alt="Project 2">
+                  <div class="project__description">
+                    <h3 class="project__description--title">Module 9 <br/> Advanced Virtual Internship - Summarist</h3>
+                    <h4 class="project__description--sub-title">React, Next.js, Tailwind CSS, JavaScript, Stripe, <br/>Redux, React-Icons, Firebase + Authentication, and Vercel</h4>
+                    <p class="project__description--para">
+                      A Summarist app built with React and Next.js featuring dynamic content <br/>summarization, API integration, and user authentication. <br/><br/>
+                      Built with modular components for navigation, featured content, login, search,<br/> and more, with responsive loading states throughout. Using GitHub and Vercel to host.
+                    </p>
+                    <div class="project__description--links">
+                      <a href="https://www.github.com/nbush71" target="_blank" class="project__description--link">
+                        <i class="fa-brands fa-github"></i>
+                      </a>
+                      <a href="https://adv-internship2.vercel.app/" class="project__description--link">
+                        <i class="fa-brands fa-react"></i> React App
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="project">
+                <div class="project__wrapper project2">
+                  <img src="./assets/Skinstric.jpg" class="project__img" alt="Project 2">
+                  <div class="project__description">
+                    <h3 class="project__description--title">Module 12 <br/> Skinstric - Virtual Paid Internship - Summarist</h3>
+                    <h4 class="project__description--sub-title">React, Next.js, Tailwind CSS, JavaScript, AI-driven, <br/>GitHub and Vercel</h4>
+                    <p class="project__description--para">
+                      Real-world project creating a replica of the Skinstric skincare AI app built from scratch with <br/>React and Next.js featuring dynamic content summarization, and API integrations. <br/><br/>
+
+                      Built with modular components for navigation, featured content, search,<br/> Server-Side Rendering (SSR), Client-Side Rendering (CSR), and more, with responsive loading states throughout. Using GitHub and Vercel to host. 
+                    </p>
+                    <div class="project__description--links">
+                      <a href="https://github.com/nbush71/Skinstric" target="_blank" class="project__description--link">
+                        <i class="fa-brands fa-github"></i>
+                      </a>
+                      <a href="https://skinstric-sable.vercel.app/" class="project__description--link">
+                        <i class="fa-brands fa-react"></i> React App
+                      </a>
+                      <a href="http://skintric.ai/" target="_blank" class="project__description--link">Skinstric AI</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+          </div>
+        </div>
+        </li>
+        </ul>
+        </div>
+        </div>
+      </section>
+      <section id="languages">
+        <div class="language__container--background">
+          <div class="row">
+            <h1 class="section__title">This is my <span>technology stack</span>.</h1>
+            <div class="language__list">
+              <div class="language">
+                <figure class="language__img--wrapper">
+                  <img src="assets/HTML5_Badge_512.png" alt="HTML Logo" class="language__img">
+                </figure>
+                <span class="language__name">HTML5</span>
+              </div>
+              <div class="language">
+                <figure class="language__img--wrapper">
+                  <img src="assets/CSS3 Logo.png" alt="CSS Logo" class="language__img"/>
+                </figure>
+                <span class="language__name">CSS3</span>
+              </div>
+              <div class="language">
+                <figure class="language__img--wrapper">
+                  <img
+                    src="assets/JavaScript Logo.png"
+                    class="language__img"
+                  />
+                </figure>
+                <span class="language__name">JavaScript</span>
+              </div>
+              <br/><br/>
+              <div class="language">
+                <figure class="language__img--wrapper">
+                  <img
+                    src="assets/React Logo.png"
+                    alt="React Logo"
+                    class="language__img"
+                  />
+                </figure>
+                <span class="language__name">React</span>
+              </div>
+          
+              <div class="language">
+                <figure class="language__img--wrapper">
+                  <img
+                    src="assets/Next-js_Logo_1.png"
+                    alt="Next.js Logo"
+                    class="language__img"
+                  />
+                </figure>
+                <span class="language__name">Next.js</span>
+              </div>
+              <div class="language">
+                <figure class="language__img--wrapper">
+                  <img
+                    src="assets/ts-logo-128.png"
+                    alt="TypeScript Logo"
+                    class="language__img"
+                  />
+                </figure>
+                <span class="language__name">TypeScript</span>
+              </div>
+              <div class="language">
+                <figure class="language__img--wrapper">
+                  <img
+                    src="assets/TailwindCSS_logo.jpeg"
+                    alt="Tailwind CSS Logo"
+                    class="language__img"
+                  />
+                </figure>
+                <span class="language__name">Tailwind CSS</span>
+              </div>
+              <div class="language">
+                <figure class="language__img--wrapper">
+                  <img
+                    src="assets/Firebase_Logo.svg"
+                    alt="Firebase Logo"
+                    class="language__img"
+                  />
+                </figure>
+                <span class="language__name">Firebase</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer__row">
+        <div class="footer__container">
+          <a href="#" class="footer__anchor">
+            <figure><img src="assets/NB_logo_White_purple.svg" class="footer__logo--img"></figure>
+            <span class="footer__logo--popper">
+              Top
+            </span></a>
+          <div class="container">
+            <div class="footer__social--list">
+              <div class="row">
+                <ul class="nav__link--list">
+                  <a
+                    href="http://www.github.com"
+                    target="_blank"
+                    class="
           footer__social--link
           link__hover-effect
-          link__hover-effect--purple">GitHub</a>
-         <a href="http://www.linkedin.com/in/nadineabush" target="_blank" class="
+          link__hover-effect--purple"
+                  >GitHub</a>
+                  <a
+                    href="http://www.linkedin.com/in/nadineabush"
+                    target="_blank"
+                    class="
           footer__social--link
           link__hover-effect
-          link__hover-effect--purple">LinkedIn</a>        
-         <a href="asset/Example Resume.pdf" target="_blank" download class="
+          link__hover-effect--purple"
+                  >LinkedIn</a>        
+                  <!--<a href="asset/Example Resume.pdf" target="_blank" class="
           footer__social--link
           link__hover-effect
           link__hover-effect--purple no-cursor
-        " target="_blank">??</a> */
-        <li class="nav__link"><a href="mailto:nbush71@gmail.com" class="
+        " target="_blank">??</a>-->
+                  <li class="nav__link" onclick="toggleModal()"><a
+                      href="#"
+                      class="
             nav__link--anchor
-            nav__link--anchor-primary">
-            Contact</a></li>
-           </div></div></footer>
-         <div class="footer__copyright">Copyright &copy; 2026 Nadine Bush | Front-End Software Engineer</div></div></div>
-</body>
-</html>
+            nav__link--anchor-primary"
+                    >
+                      Contact</a></li>
+              </div></div></footer>
+    <div class="footer__copyright">Copyright &copy; 2026 Nadine Bush | Frontend Software Engineer</div></div></div>
+  </body>
