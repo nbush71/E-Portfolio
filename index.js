@@ -25,10 +25,13 @@ function toggleContrast() {
   }
 }
 
+<<<<<<< HEAD
 // template_cazyukx
 // service_mau411s
 // 72GuNLSPH8lOYWafw
 
+=======
+>>>>>>> 1be8227b0c816a82cb875010a15ab4815b19adf0
 function contact(event) {
   event.preventDefault();
   const loading = document.querySelector(".modal__overlay--loading");
@@ -36,10 +39,17 @@ function contact(event) {
   loading.classList += " modal__overlay--visible";
   emailjs
     .sendForm(
+<<<<<<< HEAD
       "service_mau411s",
       "template_cazyukx",
       event.target,
       "72GuNLSPH8lOYWafw"
+=======
+      "service_80ih0if",
+      "template_d9refyl",
+      event.target,
+      "user_K1PoFs8pB2YVWStDxrUls"
+>>>>>>> 1be8227b0c816a82cb875010a15ab4815b19adf0
     )
     .then(() => {
       loading.classList.remove("modal__overlay--visible");
@@ -48,7 +58,11 @@ function contact(event) {
     .catch(() => {
       loading.classList.remove("modal__overlay--visible");
       alert(
+<<<<<<< HEAD
         "The email service is temporarily unavailable. Please contact me directly on nbush71@gmail.com"
+=======
+        "The email service is temporarily unavailable. Please contact me directly on email@email.com"
+>>>>>>> 1be8227b0c816a82cb875010a15ab4815b19adf0
       );
     });
 }
