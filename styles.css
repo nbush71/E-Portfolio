@@ -1173,7 +1173,7 @@ footer {
   }
 
   h1 {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .about-me__info--para {
@@ -1224,11 +1224,11 @@ footer {
   }
 
   .poster h1 {
-    font-size: 24px;
+    font-size: 21px;
   }
 
   .poster p {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .scroll {
@@ -1247,7 +1247,8 @@ footer {
     margin-right: auto;
   }
 
-  .project__wrapper {
+  .project .project__wrapper {
+    max-width: 300px;
     border-radius: 0;
   }
 
@@ -1267,14 +1268,19 @@ footer {
   }
 
   .project__description--title {
-    font-size: 32px;
+    font-size: 22px;
     line-height: 1;
     text-align: center;
   }
 
   .project__description--sub-title {
+    font-size: 13px;
     text-align: center;
     margin: 12px 0;
+  }
+
+  .section__title {
+    font-size: 24px;
   }
 
   .modal {
@@ -1335,15 +1341,15 @@ footer {
   }
 
   .modal__title {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .modal__sub-title {
     margin: 10px 0 18px;
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .modal__para {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
