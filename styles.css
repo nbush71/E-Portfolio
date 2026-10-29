@@ -1231,6 +1231,13 @@ footer {
     font-size: 15px;
   }
 
+  .scroll {
+    position: static;
+    align-self: center;
+    margin-top: 24px;
+    transform: none;
+  }
+
   .nav__link:not(:last-child) {
     display: none;
   }
