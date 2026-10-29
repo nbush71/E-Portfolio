@@ -1106,6 +1106,7 @@ footer {
   height: 100px;
   display: flex;
   position: relative;
+  border: "2px black solid";
 }
 
 .footer__copyright,
